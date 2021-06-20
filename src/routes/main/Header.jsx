@@ -1,5 +1,5 @@
 import React from 'react';
-// import { useIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import { AppBar, Grid, Typography, Box } from '@material-ui/core';
 import { NavLink } from 'react-router-dom';
 import logo from 'core/content/assets/img/logo_lgtb_1.svg';
@@ -18,8 +18,7 @@ export default () => (
         <Grid item xs={6}>
           <Box m={1}>
             <Typography align="right">
-              {/* {useIntl().formatMessage({ id: 'default.title', defaultMessage: 'Intelligent Extract' })} */}
-              {'Password Manager'}
+              {useIntl().formatMessage({ id: 'default.title', defaultMessage: 'Password Manager' })}
             </Typography>
           </Box>
         </Grid>

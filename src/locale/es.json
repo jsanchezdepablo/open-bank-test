@@ -1,3 +1,5 @@
 {
-
+  "default.error.route": "Ruta no encontrada",
+  "default.loading": "Cargando...",
+  "default.title": "Password Manager"
 }
