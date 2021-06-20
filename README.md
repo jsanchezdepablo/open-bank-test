@@ -1,3 +1,7 @@
+NOTES:
+
+I had to update some libraries as react-scripts since some properties of ECMAScript6 didn't work with old versions of react-scripts.
+
 In the project directory, you can run:
 
 ### `npm start`
