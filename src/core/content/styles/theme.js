@@ -4,17 +4,23 @@ import { primary, secondary, terciary, terciaryLight } from 'core/content/styles
 export const theme = createMuiTheme({
   typography: {
     fontFamily: ['Quicksand', 'Helvetica Neue', 'Arial', 'Helvetica', 'sans-serif'].join(','),
+    fontSize: 14,
     h5: {
       fontWeight: 900,
-      color: primary,
-    },
-    body1: {
       color: primary,
     },
     /*h6: {
       fontFamily: ['BentonSansBBVA Medium', 'Helvetica Neue', 'Arial', 'Helvetica', 'sans-serif'].join(','),
       fontWeight: 500,
     },*/
+    body1: {
+      color: primary,
+    },
+    body2: {
+      color: primary,
+      fontWeight: 600,
+      fontSize: '1.1rem',
+    },
     button: {
       fontFamily: ['Quicksand', 'Helvetica Neue', 'Arial', 'Helvetica', 'sans-serif'].join(','),
       fontWeight: 900,

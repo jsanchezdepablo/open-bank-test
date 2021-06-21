@@ -6,5 +6,13 @@
   "button.next": "Siguiente",
   "button.cancel": "Cancelar",
 
-  "CreationLayout.title": "Crea tu Password Manager"
+  "CreationLayout.title": "Crea tu Password Manager",
+
+  "DetailForm.image.brain.footer": "Guarda aquí todas tus contraseñas, datos o cualquier información, olvida las notas de papel y las aplicaciones no protegidas.",
+  "DetailForm.image.security.footer": "Crea tu clave maestra: solo tú podrás acceder a tus secretos con ella.",
+  "DetailForm.section.howWorks": "Cómo funciona",
+  "DetailForm.section.howWorks.content": "En primer lugar, debes crear una constraseña diferente para cada una de sus pertenencias electrónicas. No podrás recuperar tu contraseña, así que recuérdala bien.",
+  "DetailForm.section.whatSave": "Qué datos puedes guardar",
+  "DetailForm.section.whatSave.content": "Por ejemplo, el número de tu tarjeta, el PIN y el PUK de tu teléfono móvil, el número de serie de alguno de tus dispositivos o cualquier información que necesites tener en un lugar seguro.",
+  "DetailForm.checkBox.label": "¿Es usted mayor de edad y acepta que tratemos sus datos según la política de protección de datos de la empresa?"
 }

@@ -1,17 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useIntl } from 'react-intl';
 import { Stepper, Step, StepLabel, Typography, Grid, Box, Divider } from '@material-ui/core';
 import PrimaryButton from 'components/buttons/PrimaryButton';
 import SecondaryButton from 'components/buttons/SecondaryButton';
 import DefaultBox from 'components/grids/DefaultBox';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
-
-// import DetailForm from 'components/forms/DetailForm';
+import DetailForm from 'components/forms/DetailForm';
 
 export default ({ history }) => {
   const { formatMessage: f } = useIntl();
-  const [activeStep, setActiveStep] = React.useState(0);
+  const [activeStep, setActiveStep] = useState(0);
+  const [checked, setChecked] = useState(false);
   const steps = ['', '', ''];
+
+  const getStepComponent = () => {
+    switch (activeStep) {
+      case 0:
+        return <DetailForm checked={checked} setChecked={setChecked} />;
+
+      /* case 0: {
+      return <DetailForm />;
+      break;
+    } */
+      default:
+        break;
+    }
+  };
 
   return (
     <>
@@ -27,7 +41,7 @@ export default ({ history }) => {
           {f({ id: 'CreationLayout.title', defaultMessage: 'Create your Password Manager' })}
         </Typography>
         <Divider className="short-divider" />
-        {/* <DetailForm {...props} /> */}
+        {getStepComponent()}
       </DefaultBox>
 
       <Divider />
@@ -46,6 +60,7 @@ export default ({ history }) => {
               <PrimaryButton
                 onClick={() => setActiveStep(activeStep + 1)}
                 endIcon={<NavigateNextIcon style={{ fontSize: 22 }} />}
+                disabled={!checked}
               >
                 {f({ id: 'button.next', defaultMessage: 'Next' })}
               </PrimaryButton>
