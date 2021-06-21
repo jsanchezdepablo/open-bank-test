@@ -1,2 +1,1 @@
-export const DETAIL = '/detail';
-export const CREATION = '/creation';
+export const CREATE = '/create';

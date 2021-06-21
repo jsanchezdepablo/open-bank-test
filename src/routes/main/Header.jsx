@@ -11,7 +11,7 @@ export default () => (
         <Grid item xs={6}>
           <NavLink to="/">
             <Box m={1} pl={1}>
-              <img src={logo} alt="open-bank-logo" width="150px" height="25px" />
+              <img src={logo} alt="openbank-logo" width="150px" height="25px" />
             </Box>
           </NavLink>
         </Grid>

@@ -1,4 +1,4 @@
 import layouts from 'routes/layouts';
-import { DETAIL /* , CREATION  */ } from 'routes/routing/paths';
+import { CREATE } from 'routes/routing/paths';
 
-export default [{ path: DETAIL, component: layouts?.DetailLayout }];
+export default [{ path: CREATE, component: layouts?.CreationLayout }];

@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 
-const DetailLayout = lazy(() => import('./DetailLayout'));
+const CreationLayout = lazy(() => import('./CreationLayout'));
 
 export default {
-  DetailLayout,
+  CreationLayout,
 };

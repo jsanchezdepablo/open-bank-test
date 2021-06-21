@@ -1,5 +1,10 @@
 {
   "default.error.route": "Route not found",
   "default.loading": "Loading...",
-  "default.title": "Password Manager"
+  "default.title": "Password Manager",
+
+  "button.next": "Next",
+  "button.cancel": "Cancel",
+
+  "CreationLayout.title": "Create your Password Manager"
 }
