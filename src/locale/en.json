@@ -7,8 +7,8 @@
   "button.cancel": "Cancel",
 
   "error.required": "Required input",
-  "error.minLength": "Minimum length is 8 characters",
-  "error.maxLength": "The maximum length is 24 characters",
+  "error.minLength": "Minimum length is {minLength} characters",
+  "error.maxLength": "The maximum length is {maxLength} characters",
   "error.pattern": "You must introduce at least one number and one capital letter. Remember not to use blank spaces",
   "error.noEquals": "Passwords must match",
 
@@ -24,6 +24,9 @@
 
   "CreationPasswordForm.info.masterKeyCreation": "First of all, you need to create a different password that will be your master key.",
   "CreationPasswordForm.info.noRecover": "You won't be able to recover your password, so don't forget it.",
+  "CreationPasswordForm.info.createHint": "You can also create a hint to help you remember your master password",
   "CreationPasswordForm.input.firstPass": "Create your Master Key",
-  "CreationPasswordForm.input.secondPass": "Repeat your Master Key"
+  "CreationPasswordForm.input.secondPass": "Repeat your Master Key",
+  "CreationPasswordForm.input.createHint": "Create your hint to remember your password (optional)",
+  "CreationPasswordForm.input.createHint.placeholder": "Introduce your hint"
 }

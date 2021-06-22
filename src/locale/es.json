@@ -7,8 +7,8 @@
   "button.cancel": "Cancelar",
 
   "error.required": "Este campo es obligatorio",
-  "error.minLength": "La longitud mínima es de 8 caracteres",
-  "error.maxLength": "La longitud máxima es de 24 caracteres",
+  "error.minLength": "La longitud mínima es de {minLength} caracteres",
+  "error.maxLength": "La longitud máxima es de {maxLength} caracteres",
   "error.pattern": "Debes introducir al menos un número y una mayúscula. Recuerda no usar espacios en blanco",
   "error.noEquals": "Las contraseñas deben coincidir",
 
@@ -24,6 +24,9 @@
 
   "CreationPasswordForm.info.masterKeyCreation": "En primer lugar, debes crear una contraseña diferente que servirá como clave maestra.",
   "CreationPasswordForm.info.noRecover": "No podrás recuperar la contraseña, así que recuérdala bien.",
+  "CreationPasswordForm.info.createHint": "También puedes crear una pista que te ayude a recordar tu constraseña maestra",
   "CreationPasswordForm.input.firstPass": "Crea tu Contraseña Maestra",
-  "CreationPasswordForm.input.secondPass": "Repite tu Contraseña Maestra"
+  "CreationPasswordForm.input.secondPass": "Repite tu Contraseña Maestra",
+  "CreationPasswordForm.input.createHint": "Crea tu pista para recordar tu constraseña (opcional)",
+  "CreationPasswordForm.input.createHint.placeholder": "Introduce tu pista"
 }

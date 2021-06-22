@@ -10,7 +10,13 @@ export default ({ setTypeButton, setCreationResponse, formName }) => {
   const { formatMessage: f } = useIntl();
   const [showPasswords, setShowPasswords] = useState({ first: false, second: false });
   const [errorMessage, setErrorMessage] = useState('');
-  const validations = { required: true, minLength: 8, maxLength: 24, pattern: /^(?=\w*\d)(?=\w*[A-Z])\S{8,24}$/ };
+  const LENGTH = { min: 8, medium: 24, max: 255 };
+  const validations = {
+    required: true,
+    minLength: LENGTH.min,
+    maxLength: LENGTH.medium,
+    pattern: /^(?=\w*\d)(?=\w*[A-Z])\S{8,24}$/,
+  };
 
   const {
     register,
@@ -29,13 +35,23 @@ export default ({ setTypeButton, setCreationResponse, formName }) => {
   const getErrorMessage = error => {
     switch (error) {
       case 'required':
-        return f({ id: 'error.required', defaultMessage: '' });
+        return f({ id: 'error.required', defaultMessage: 'Required input' });
       case 'minLength':
-        return f({ id: 'error.minLength', defaultMessage: '' });
+        return f(
+          { id: 'error.minLength', defaultMessage: 'Minimum length is 8 characters' },
+          { minLength: LENGTH.min },
+        );
       case 'maxLength':
-        return f({ id: 'error.maxLength', defaultMessage: '' });
+        return f(
+          { id: 'error.maxLength', defaultMessage: 'The maximum length is 24 characters' },
+          { maxLength: LENGTH.medium },
+        );
       case 'pattern':
-        return f({ id: 'error.pattern', defaultMessage: '' });
+        return f({
+          id: 'error.pattern',
+          defaultMessage:
+            'You must introduce at least one number and one capital letter. Remember not to use blank spaces',
+        });
       default:
         break;
     }
@@ -53,9 +69,11 @@ export default ({ setTypeButton, setCreationResponse, formName }) => {
           setCreationResponse(response?.status); //DEVUELVO EL COMPONENTE DE ERROR
         });
     } else {
-      setErrorMessage(f({ id: 'error.noEquals', defaultMessage: '' }));
+      setErrorMessage(f({ id: 'error.noEquals', defaultMessage: 'Passwords must match' }));
     }
   };
+
+  console.log(errors);
 
   return (
     <Box pt={4}>
@@ -83,7 +101,7 @@ export default ({ setTypeButton, setCreationResponse, formName }) => {
                 name="firstPass"
                 label={f({
                   id: 'CreationPasswordForm.input.firstPass',
-                  defaultMessage: "You won't be able to recover your password, so don't forget it.",
+                  defaultMessage: 'Create your Master Key',
                 })}
                 type={showPasswords?.first ? 'text' : 'password'}
                 inputRef={register({
@@ -121,7 +139,7 @@ export default ({ setTypeButton, setCreationResponse, formName }) => {
                 name="secondPass"
                 label={f({
                   id: 'CreationPasswordForm.input.secondPass',
-                  defaultMessage: "You won't be able to recover your password, so don't forget it.",
+                  defaultMessage: 'Repeat your Master Key',
                 })}
                 type={showPasswords?.second ? 'text' : 'password'}
                 inputRef={register({
@@ -152,6 +170,47 @@ export default ({ setTypeButton, setCreationResponse, formName }) => {
               />
             </Grid>
           </Grid>
+          <Box pt={4}>
+            <Typography>
+              {f({
+                id: 'CreationPasswordForm.info.createHint',
+                defaultMessage: 'You can also create a hint to help you remember your master password',
+              })}
+            </Typography>
+            <Box pt={2}>
+              <Typography variant="body2">
+                {f({
+                  id: 'CreationPasswordForm.input.createHint',
+                  defaultMessage: 'Create your hint to remember your password (optional)',
+                })}
+              </Typography>
+            </Box>
+            <Box pt={1}>
+              <TextField
+                fullWidth
+                variant="outlined"
+                name="hint"
+                placeholder={f({
+                  id: 'CreationPasswordForm.input.createHint.placeholder',
+                  defaultMessage: 'Introduce your hint',
+                })}
+                inputRef={register({
+                  maxLength: {
+                    value: LENGTH.max,
+                    message: f(
+                      {
+                        id: 'error.maxLength',
+                        defaultMessage: '',
+                      },
+                      { maxLength: LENGTH.max },
+                    ),
+                  },
+                })}
+                error={errors?.hasOwnProperty('hint')}
+                helperText={errors?.hasOwnProperty('hint') ? errors?.hint?.message : ''}
+              />
+            </Box>
+          </Box>
         </form>
       </Box>
     </Box>
