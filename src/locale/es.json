@@ -6,6 +6,12 @@
   "button.next": "Siguiente",
   "button.cancel": "Cancelar",
 
+  "error.required": "Este campo es obligatorio",
+  "error.minLength": "La longitud mínima es de 8 caracteres",
+  "error.maxLength": "La longitud máxima es de 24 caracteres",
+  "error.pattern": "Debes introducir al menos un número y una mayúscula. Recuerda no usar espacios en blanco",
+  "error.noEquals": "Las contraseñas deben coincidir",
+
   "CreationLayout.title": "Crea tu Password Manager",
 
   "DetailForm.image.brain.footer": "Guarda aquí todas tus contraseñas, datos o cualquier información, olvida las notas de papel y las aplicaciones no protegidas.",
@@ -14,5 +20,10 @@
   "DetailForm.section.howWorks.content": "En primer lugar, debes crear una constraseña diferente para cada una de sus pertenencias electrónicas. No podrás recuperar tu contraseña, así que recuérdala bien.",
   "DetailForm.section.whatSave": "Qué datos puedes guardar",
   "DetailForm.section.whatSave.content": "Por ejemplo, el número de tu tarjeta, el PIN y el PUK de tu teléfono móvil, el número de serie de alguno de tus dispositivos o cualquier información que necesites tener en un lugar seguro.",
-  "DetailForm.checkBox.label": "¿Es usted mayor de edad y acepta que tratemos sus datos según la política de protección de datos de la empresa?"
+  "DetailForm.checkBox.label": "¿Es usted mayor de edad y acepta que tratemos sus datos según la política de protección de datos de la empresa?",
+
+  "CreationPasswordForm.info.masterKeyCreation": "En primer lugar, debes crear una contraseña diferente que servirá como clave maestra.",
+  "CreationPasswordForm.info.noRecover": "No podrás recuperar la contraseña, así que recuérdala bien.",
+  "CreationPasswordForm.input.firstPass": "Crea tu Contraseña Maestra",
+  "CreationPasswordForm.input.secondPass": "Repite tu Contraseña Maestra"
 }

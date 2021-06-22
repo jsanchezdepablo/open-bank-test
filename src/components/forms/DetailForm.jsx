@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Typography, Grid, Box } from '@material-ui/core';
 import { useIntl } from 'react-intl';
 import brainLogo from 'core/content/assets/img/group.svg';
 import securityLogo from 'core/content/assets/img/group-3.svg';
 import DefaultCheckBox from 'components/checkbox/DefaultCheckbox';
 
-export default ({ checked, setChecked }) => {
+export default ({ setIsDisabled }) => {
   const { formatMessage: f } = useIntl();
+  const [checked, setChecked] = useState(false);
+
+  useEffect(() => {
+    setIsDisabled(!checked);
+  }, [checked, setIsDisabled]);
 
   return (
     <Box pt={4}>
