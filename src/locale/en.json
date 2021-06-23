@@ -9,7 +9,7 @@
   "error.required": "Required input",
   "error.minLength": "Minimum length is {minLength} characters",
   "error.maxLength": "The maximum length is {maxLength} characters",
-  "error.pattern": "You must introduce at least one number and one capital letter. Remember not to use blank spaces",
+  "error.pattern": "Format error: You must introduce at least one number and one capital letter. Remember not to use blank spaces",
   "error.noEquals": "Passwords must match",
 
   "CreationLayout.title": "Create your Password Manager",

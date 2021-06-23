@@ -7,11 +7,12 @@ import SecondaryButton from 'components/buttons/SecondaryButton';
 import DefaultBox from 'components/grids/DefaultBox';
 import DetailForm from 'components/forms/DetailForm';
 import CreationPasswordForm from 'components/forms/CreationPasswordForm';
+import ResponseForm from 'components/forms/ResponseForm';
 
 export default ({ history }) => {
   const { formatMessage: f } = useIntl();
-  const [activeStep, setActiveStep] = useState(1);
-  const [isDisabled, setIsDisabled] = useState(false);
+  const [activeStep, setActiveStep] = useState(0);
+  const [isDisabled, setIsDisabled] = useState(true);
   const [typeButton, setTypeButton] = useState(null);
   const [creationResponse, setCreationResponse] = useState(null);
   const steps = ['detail', 'creationPassword', 'creationPasswordResult'];
@@ -36,7 +37,7 @@ export default ({ history }) => {
           />
         );
       case 2:
-        return creationResponse;
+        return <ResponseForm status={creationResponse} />;
       default:
         break;
     }
@@ -56,7 +57,7 @@ export default ({ history }) => {
           {f({ id: 'CreationLayout.title', defaultMessage: 'Create your Password Manager' })}
         </Typography>
         <Divider className="short-divider" />
-        {getStepComponent()}
+        <Box pt={4}>{getStepComponent()}</Box>
       </DefaultBox>
       {activeStep !== 2 && (
         <>

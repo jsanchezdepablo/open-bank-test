@@ -5,16 +5,16 @@ import { Typography, Grid, Box, InputAdornment, IconButton, TextField } from '@m
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import { submitForm } from 'services/api';
+import { config } from 'core/constants';
 
 export default ({ setTypeButton, setCreationResponse, formName }) => {
   const { formatMessage: f } = useIntl();
   const [showPasswords, setShowPasswords] = useState({ first: false, second: false });
   const [errorMessage, setErrorMessage] = useState('');
-  const LENGTH = { min: 8, medium: 24, max: 255 };
   const validations = {
     required: true,
-    minLength: LENGTH.min,
-    maxLength: LENGTH.medium,
+    minLength: config.INPUT_LENGTH.min,
+    maxLength: config.INPUT_LENGTH.medium,
     pattern: /^(?=\w*\d)(?=\w*[A-Z])\S{8,24}$/,
   };
 
@@ -39,18 +39,18 @@ export default ({ setTypeButton, setCreationResponse, formName }) => {
       case 'minLength':
         return f(
           { id: 'error.minLength', defaultMessage: 'Minimum length is 8 characters' },
-          { minLength: LENGTH.min },
+          { minLength: config.INPUT_LENGTH.min },
         );
       case 'maxLength':
         return f(
           { id: 'error.maxLength', defaultMessage: 'The maximum length is 24 characters' },
-          { maxLength: LENGTH.medium },
+          { maxLength: config.INPUT_LENGTH.medium },
         );
       case 'pattern':
         return f({
           id: 'error.pattern',
           defaultMessage:
-            'You must introduce at least one number and one capital letter. Remember not to use blank spaces',
+            'Format error: You must introduce at least one number and one capital letter. Remember not to use blank spaces',
         });
       default:
         break;
@@ -58,25 +58,21 @@ export default ({ setTypeButton, setCreationResponse, formName }) => {
   };
 
   const onSubmit = data => {
-    const { firstPass, secondPass } = data;
+    const { firstPass, secondPass, hint } = data;
 
-    if (firstPass.includes(secondPass)) {
-      submitForm(data.example)
-        .then(response => {
-          setCreationResponse(response?.status); //DEVUELVO EL COMPONENTE DE SUCCESS
-        })
-        .catch(response => {
-          setCreationResponse(response?.status); //DEVUELVO EL COMPONENTE DE ERROR
-        });
-    } else {
-      setErrorMessage(f({ id: 'error.noEquals', defaultMessage: 'Passwords must match' }));
-    }
+    firstPass.includes(secondPass)
+      ? submitForm(firstPass, secondPass, hint)
+          .then(response => {
+            setCreationResponse(response?.status);
+          })
+          .catch(response => {
+            setCreationResponse(response?.status);
+          })
+      : setErrorMessage(f({ id: 'error.noEquals', defaultMessage: 'Passwords must match' }));
   };
 
-  console.log(errors);
-
   return (
-    <Box pt={4}>
+    <>
       <Typography>
         {f({
           id: 'CreationPasswordForm.info.masterKeyCreation',
@@ -196,13 +192,13 @@ export default ({ setTypeButton, setCreationResponse, formName }) => {
                 })}
                 inputRef={register({
                   maxLength: {
-                    value: LENGTH.max,
+                    value: config.INPUT_LENGTH.max,
                     message: f(
                       {
                         id: 'error.maxLength',
                         defaultMessage: '',
                       },
-                      { maxLength: LENGTH.max },
+                      { maxLength: config.INPUT_LENGTH.max },
                     ),
                   },
                 })}
@@ -213,6 +209,6 @@ export default ({ setTypeButton, setCreationResponse, formName }) => {
           </Box>
         </form>
       </Box>
-    </Box>
+    </>
   );
 };

@@ -14,7 +14,7 @@ export default ({ setIsDisabled }) => {
   }, [checked, setIsDisabled]);
 
   return (
-    <Box pt={4}>
+    <>
       <Grid container spacing={2} direction="row" justify="space-evenly" alignItems="center">
         <Grid item xs={4}>
           <Grid container direction="row" alignItems="center">
@@ -90,6 +90,6 @@ export default ({ setIsDisabled }) => {
           })}
         />
       </Box>
-    </Box>
+    </>
   );
 };

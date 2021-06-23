@@ -9,7 +9,7 @@
   "error.required": "Este campo es obligatorio",
   "error.minLength": "La longitud mínima es de {minLength} caracteres",
   "error.maxLength": "La longitud máxima es de {maxLength} caracteres",
-  "error.pattern": "Debes introducir al menos un número y una mayúscula. Recuerda no usar espacios en blanco",
+  "error.pattern": "Error de formato: Debes introducir al menos un número y una mayúscula. Recuerda no usar espacios en blanco",
   "error.noEquals": "Las contraseñas deben coincidir",
 
   "CreationLayout.title": "Crea tu Password Manager",
