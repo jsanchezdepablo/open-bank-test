@@ -19,11 +19,9 @@ function loadLocaleData(locale) {
 const App = ({ locale, messages }) => (
   <React.StrictMode>
     <IntlProvider locale={locale} defaultLocale="en" messages={messages}>
-      {/* <Provider store={store}> */}
       <ErrorBoundary>
         <MainApp />
       </ErrorBoundary>
-      {/* </Provider> */}
     </IntlProvider>
   </React.StrictMode>
 );
