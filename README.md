@@ -1,9 +1,13 @@
-NOTES:
+### `Notes`
+
 I had to update some libraries as react-scripts since some properties of ECMAScript6 didn't work with old versions of react-scripts.
 
-LANGUAGES:
+LANGUAGES<br>
 There are two languages, English and Spanish. To switch between them, it's necessary to change the language of the browser and recharge the web page.
 Any different language to spanish will be showed as english.
+
+GET ERROR RESPONSE<br>
+To simulate an error response it's neccessary to use 'pruebaKO123' as password.
 
 In the project directory, you can run:
 
