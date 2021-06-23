@@ -11,6 +11,10 @@ To simulate an error response it's neccessary to use 'pruebaKO123' as password.
 
 In the project directory, you can run:
 
+### `npm install`
+
+You need to do first this step. It's necessary to download all libraries associated to this project.
+
 ### `npm start`
 
 Runs the app in the development mode.<br>
