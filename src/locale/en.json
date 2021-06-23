@@ -5,6 +5,8 @@
 
   "button.next": "Next",
   "button.cancel": "Cancel",
+  "button.access": "Access",
+  "button.goBack": "Go back to Password Manager",
 
   "error.required": "Required input",
   "error.minLength": "Minimum length is {minLength} characters",
@@ -18,7 +20,7 @@
   "DetailForm.image.security.footer": "Create your master key: only you will be able to access to your secrets.",
   "DetailForm.section.howWorks": "How works?",
   "DetailForm.section.howWorks.content": "First of all, you have to create a different password for each of your electronic devices. You will not be able to recover your password, so remember it well.",
-  "DetailForm.section.whatSave": "What can I save?",
+  "DetailForm.section.whatSave": "What can you save?",
   "DetailForm.section.whatSave.content": "For example, you can save your card number, your mobile phone's PIN and PUK, or any information that you need to have in a safe place.",
   "DetailForm.checkBox.label": "Are you an adult and do you accept that we treat your data according to the company's data protection policy?",
 
@@ -28,5 +30,10 @@
   "CreationPasswordForm.input.firstPass": "Create your Master Key",
   "CreationPasswordForm.input.secondPass": "Repeat your Master Key",
   "CreationPasswordForm.input.createHint": "Create your hint to remember your password (optional)",
-  "CreationPasswordForm.input.createHint.placeholder": "Introduce your hint"
+  "CreationPasswordForm.input.createHint.placeholder": "Introduce your hint",
+
+  "ResponseForm.title.ok": "Your Password Manager has been created!",
+  "ResponseForm.title.ko": "An error has occurred",
+  "ResponseForm.subtitle.ok": "Click on the button below to start using the application.",
+  "ResponseForm.subtitle.ko": "Sorry, we were unable to create your Master Password. Try again later."
 }

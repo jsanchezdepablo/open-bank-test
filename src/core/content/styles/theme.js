@@ -9,10 +9,10 @@ export const theme = createMuiTheme({
       fontWeight: 900,
       color: primary,
     },
-    /*h6: {
-      fontFamily: ['BentonSansBBVA Medium', 'Helvetica Neue', 'Arial', 'Helvetica', 'sans-serif'].join(','),
-      fontWeight: 500,
-    },*/
+    h6: {
+      fontFamily: ['Quicksand', 'Helvetica Neue', 'Arial', 'Helvetica', 'sans-serif'].join(','),
+      fontWeight: 900,
+    },
     body1: {
       color: primary,
     },

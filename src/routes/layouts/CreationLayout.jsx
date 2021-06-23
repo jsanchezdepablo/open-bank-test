@@ -37,7 +37,7 @@ export default ({ history }) => {
           />
         );
       case 2:
-        return <ResponseForm status={creationResponse} />;
+        return <ResponseForm status={creationResponse} history={history} />;
       default:
         break;
     }

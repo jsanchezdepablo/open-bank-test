@@ -5,6 +5,8 @@
 
   "button.next": "Siguiente",
   "button.cancel": "Cancelar",
+  "button.access": "Acceder",
+  "button.goBack": "Volver a Password Manager",
 
   "error.required": "Este campo es obligatorio",
   "error.minLength": "La longitud mínima es de {minLength} caracteres",
@@ -28,5 +30,10 @@
   "CreationPasswordForm.input.firstPass": "Crea tu Contraseña Maestra",
   "CreationPasswordForm.input.secondPass": "Repite tu Contraseña Maestra",
   "CreationPasswordForm.input.createHint": "Crea tu pista para recordar tu constraseña (opcional)",
-  "CreationPasswordForm.input.createHint.placeholder": "Introduce tu pista"
+  "CreationPasswordForm.input.createHint.placeholder": "Introduce tu pista",
+
+  "ResponseForm.title.ok": "¡Tu Password Manager ya está creado!",
+  "ResponseForm.title.ko": "Ha habido un error",
+  "ResponseForm.subtitle.ok": "Pulsa en el botón de abajo para comenzar a usar la aplicación.",
+  "ResponseForm.subtitle.ko": "Lo sentimos, no hemos podido crear tu Contraseña Maestra. Inténtalo de nuevo más tarde."
 }

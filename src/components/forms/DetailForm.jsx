@@ -67,7 +67,7 @@ export default ({ setIsDisabled }) => {
         <Typography variant="body2">
           {f({
             id: 'DetailForm.section.whatSave',
-            defaultMessage: 'What can I save?',
+            defaultMessage: 'What can you save?',
           })}
         </Typography>
         <Typography>
